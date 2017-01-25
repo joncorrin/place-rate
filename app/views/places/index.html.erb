@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Places</h1>
+<div class="jumbotron">
+  <h2>Place Rate is the best way to find places and rate them!</h2>
+  <h3>Make sure to checkout and rate all of your favorite places.<br>
+      Restaurants, gyms, you name it, we got it, you rate it.</h3>
+</div>
 
 <table class="table table-hover table-condensed">
   <thead>
@@ -26,8 +30,9 @@
       </tr>
     <% end %>
   </tbody>
+  <tfoot>
+    <tr>
+      <%= link_to 'New Place', new_place_path, class: "btn btn-link"  %>
+    </tr>
+  </tfoot>
 </table>
-
-<br>
-
-<%= link_to 'New Place', new_place_path, class: "btn btn-link"  %>

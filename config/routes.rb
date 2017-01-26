@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :reviews, except: [:show, :index]
+
   devise_for :users
-  resources :places
+  resources :places do
+    resources :reviews, except: [:show, :index]
+  end
   root 'places#index'
   get  '/about',   to: 'pages#about'
 

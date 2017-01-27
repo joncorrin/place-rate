@@ -41,6 +41,7 @@ gem 'fog-aws', '1.2.0'
 gem 'figaro'
 gem 'devise'
 gem 'mini_magick'
+gem 'searchkick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

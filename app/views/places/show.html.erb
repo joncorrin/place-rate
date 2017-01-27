@@ -30,6 +30,10 @@
       <%= link_to @place.website, @place.website %>
     </p>
     <%= link_to "Write a review", new_place_review_path(@place), class: "btn btn-primary" %>
+    <br>
+    <br>
+    <iframe width="250" height="250" frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?q=<%= @place.city.parameterize %>&key=AIzaSyCOo5JybAUueilwSBmsuj1wc9F4LcIKrWc"&zoom=14 allowfullscreen></iframe>
   </div>
 
   <div class="col-md-9">

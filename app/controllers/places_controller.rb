@@ -10,7 +10,12 @@ class PlacesController < ApplicationController
   # GET /places/1
   # GET /places/1.json
   def show
-    @reviews = Review.where(place_id: @place.id)
+    @reviews = Review.where(place_id: @place.id).order("created_at DESC")
+    if @reviews.blank?
+      @avg_rating = 0
+    else
+      @avg_rating = @reviews.average(:rating).round(2)
+    end
   end
 
   # GET /places/new

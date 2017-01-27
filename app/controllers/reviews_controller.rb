@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
   before_action :set_review, only: [:edit, :update, :destroy]
   before_action :set_place
   before_action :authenticate_user!
+  before_action :check_user, only: [:edit, :update, :destroy]
 
   # GET /reviews/1
   # GET /reviews/1.json
@@ -54,7 +55,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
+      format.html { redirect_to place_path(@place), notice: 'Review was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -67,6 +68,12 @@ class ReviewsController < ApplicationController
 
     def set_place
       @place = Place.find(params[:place_id])
+    end
+
+    def check_user
+      unless (@review.user == current_user) || (current_user.admin?)
+        redirect_to root_url, alert: "Sorry, this review belongs to someone else"
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

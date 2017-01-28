@@ -11,7 +11,4 @@ class Place < ApplicationRecord
 
   validates :website, format: {with: /\Ahttps?:\/\/.*\z/,
     message: "must start with http:// or https://"}
-
-  validates :city, format: {with: /\A[a-zA-z]\z/,
-    message: "city can only contain letters"}
 end

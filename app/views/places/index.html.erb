@@ -13,6 +13,7 @@
       <th>City</th>
       <th>State</th>
       <th>Website</th>
+      <th>Rating</th>
       <% if user_signed_in? && current_user.admin? %>
         <th colspan="2"></th>
       <% end %>
@@ -20,12 +21,13 @@
   </thead>
 
   <tbody>
-    <% @places.each do |place| %>
+    <% @places.each do |place, review| %>
       <tr>
         <td><%= link_to place.name, place %></td>
         <td><%= place.city %></td>
         <td><%= place.state %></td>
         <td><%= link_to place.website, place.website %></td>
+        <td><div class="star-rating" data-score= <%= @avg_rating %> ></div></td>
         <% if user_signed_in? && current_user.admin? %>
           <td><%= link_to 'Edit', edit_place_path(place) %></td>
           <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>

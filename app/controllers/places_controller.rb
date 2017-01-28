@@ -15,6 +15,12 @@ class PlacesController < ApplicationController
   # GET /places.json
   def index
     @places = Place.all
+    @reviews = Review.where(place_id: @place_id)
+    if @reviews.blank?
+      @avg_rating = 0
+    else
+      @avg_rating = @reviews.average(:rating).round(2)
+    end
   end
 
   # GET /places/1

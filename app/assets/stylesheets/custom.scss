@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+	margin: 0 !important;
+}
+
 .jumbotron {
 	background-color: #fdf8e1;
 	border: 1px solid #f2cb3b;
@@ -9,32 +13,48 @@
 			font-weight: bold;
 	}
 }
+.navbar {
+
+}
 
 .navbar-default {
 	.container-fluid {
 		background-color: #b80b03;
 		.navbar-nav > li > a {
 			color: #ffffff;
-			font-size: 16px;
+			font-size: 21px;
 			font-weight: bold;
+			padding-top: 35px !important;
 		}
 		.navbar-brand {
 			color: black;
-			font-size: 30px;
+			font-size: 35px;
 			font-weight: bold;
 			font-family: 'Hobo std';
 			text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+			padding-top: 35px !important;
 		}
 	}
 }
 
+.navbar-form {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
 .container-fluid {
-	padding: 10px 120px;
+	padding-left: 50px !important;
+	padding-right: 50px !important;
+}
+
+.table {
+	font-size: 20px !important;
 }
 
 .footer_image {
 	width: 75%;
   padding-top: 75px;
+	padding-left: 25%;
 }
 
 .copyright {

@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application that allows users to rate a business.
+The business has to be pre-uploaded where it can be
+edited, reviewed, or deleted by the admin. Users can review or
+rate and comment on the place. Each user creates their own
+personal profile for this applications.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Have fun rating places!

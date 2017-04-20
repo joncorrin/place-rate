@@ -5,7 +5,7 @@ This website helps users list, review, and find reviewed businesses.
 # This website demonstrates: 
 
 * Ruby on Rails
-* TDD (Test-Driven-Development)
+* TDD (Test-driven development)
 * Git/Version control
 * HTTP Requests
 * Bootstrap design

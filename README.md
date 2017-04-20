@@ -1,9 +1,14 @@
-# README
+# PlaceRate - A review site built on Rails
 
-This is an application that allows users to rate a business.
-The business has to be pre-uploaded where it can be
-edited, reviewed, or deleted by the admin. Users can review or
-rate and comment on the place. Each user creates their own
-personal profile for this applications.
+This website helps users list, review, and find reviewed businesses. 
 
-Have fun rating places!
+# This website demonstrates: 
+
+* Ruby on Rails
+* HTTP Requests
+* Bootstrap design
+* Responsive web design
+* Google Maps API
+* Heroku deployment
+* User authorizations
+* ... and more!
